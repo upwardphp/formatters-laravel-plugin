@@ -2086,10 +2086,6 @@
             ],
             "type": "library",
             "extra": {
-                "branch-alias": {
-                    "dev-master": "3.x-dev",
-                    "dev-2.x": "2.x-dev"
-                },
                 "laravel": {
                     "providers": [
                         "Carbon\\Laravel\\ServiceProvider"
@@ -2099,6 +2095,10 @@
                     "includes": [
                         "extension.neon"
                     ]
+                },
+                "branch-alias": {
+                    "dev-2.x": "2.x-dev",
+                    "dev-master": "3.x-dev"
                 }
             },
             "autoload": {
@@ -5379,16 +5379,16 @@
         },
         {
             "name": "upward/formatters",
-            "version": "v1.4.0",
+            "version": "v1.4.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/upwardphp/formatters.git",
-                "reference": "fa796dc5af6b43b43f2295e6219921be20089099"
+                "reference": "4a7f1db3c3a99165d028978104b88acec5c75f3d"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/upwardphp/formatters/zipball/fa796dc5af6b43b43f2295e6219921be20089099",
-                "reference": "fa796dc5af6b43b43f2295e6219921be20089099",
+                "url": "https://api.github.com/repos/upwardphp/formatters/zipball/4a7f1db3c3a99165d028978104b88acec5c75f3d",
+                "reference": "4a7f1db3c3a99165d028978104b88acec5c75f3d",
                 "shasum": ""
             },
             "require": {
@@ -5400,7 +5400,8 @@
             "type": "library",
             "autoload": {
                 "files": [
-                    "src/Helpers/sanitization.php"
+                    "src/Helpers/sanitization.php",
+                    "src/Helpers/document.php"
                 ],
                 "psr-4": {
                     "Upward\\Formatters\\": "src/"
@@ -5419,9 +5420,9 @@
             "description": "Formatters utils",
             "support": {
                 "issues": "https://github.com/upwardphp/formatters/issues",
-                "source": "https://github.com/upwardphp/formatters/tree/v1.4.0"
+                "source": "https://github.com/upwardphp/formatters/tree/v1.4.4"
             },
-            "time": "2024-12-18T14:27:19+00:00"
+            "time": "2024-12-19T20:15:10+00:00"
         },
         {
             "name": "vlucas/phpdotenv",

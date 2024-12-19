@@ -13,11 +13,7 @@ it('should return Document instance', function () {
 });
 
 it('should be able choose CPF Document by the given value', function (string $value): void {
-    $document = Document::choose($value);
-
-    $reflector = new ReflectionClass($document);
-
-    expect(value: $reflector->getProperty(name: 'document')->getValue($document))
+    expect(value: Document::choose($value)->document)
         ->toBeInstanceOf(class: CpfDocument::class);
 })->with([
     '12345678901',
@@ -26,14 +22,18 @@ it('should be able choose CPF Document by the given value', function (string $va
 ]);
 
 it('should be able choose CNPJ Document by the given value', function (string $value): void {
-    $document = Document::choose($value);
-
-    $reflector = new ReflectionClass($document);
-
-    expect(value: $reflector->getProperty(name: 'document')->getValue($document))
+    expect(value: Document::choose($value)->document)
         ->toBeInstanceOf(class: CnpjDocument::class);
 })->with([
     '46730186000135b',
     'd00562650000152',
     '04593675000106',
+]);
+
+it('should not be able choose Document', function (string $value): void {
+    expect(value: Document::choose($value))
+        ->toBeNull();
+})->with([
+    'foo',
+    'bar',
 ]);
