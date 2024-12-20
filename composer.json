@@ -18,7 +18,7 @@
     "require": {
         "php": "^8.3",
         "illuminate/support": "^11.0",
-        "upward/formatters": "^1.2"
+        "upward/formatters": "^1.4.4"
     },
     "extra": {
         "laravel": {
