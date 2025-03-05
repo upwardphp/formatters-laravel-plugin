@@ -9,8 +9,6 @@ final class FormattersServiceProvider extends ServiceProvider
 {
     public function register(): void
     {
-        $this->app->bind('upward.formatters.document', function (): Document {
-            return new Document();
-        });
+        $this->app->bind('upward.formatters.document', fn (): Document => new Document());
     }
 }
